@@ -1,11 +1,13 @@
-import HeroSection from './HeroSection'
+import React from "react";
+import HeroSection from "./sections/HeroSection";
+import BrowseSection from "./sections/BrowseSection";
 
-const HomePage = () => {
-  return (
-    <div className="space-y-16">
-      <HeroSection />
-    </div>
-  )
-}
 
-export default HomePage
+const HomePage: React.FC = () => (
+  <div className="space-y-16">
+    <HeroSection />
+    <BrowseSection />
+  </div>
+);
+
+export default HomePage;

@@ -13,10 +13,11 @@ interface ICardProps {
 
 const Card: React.FC<ICardProps> = ({ image, title, location, price, label = "HOUSE", hideIcons = false }) => {
   return (
-    <div className="w-full sm:w-80 md:max-w-xs rounded-2xl bg-white shadow-sm overflow-visible relative hover:ring-1 hover:ring-base-400">
+    <div className="w-full max-w-xs rounded-2xl bg-white shadow-sm overflow-hidden relative hover:ring-1 hover:ring-base-400">
       <div className="relative">
         <img
           src={image}
+          loading="lazy"
           alt={title}
           className="w-full h-32 sm:h-48 object-cover rounded-t-2xl "
         />
