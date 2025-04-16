@@ -36,7 +36,9 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className="relative lg:w-1/2 px-9 lg:px-0">
-        <img src="/map.png" loading="lazy" alt="Map background" className="w-full h-auto object-cover" style={{ aspectRatio: "16 / 9" }} />
+        <div className="overflow-hidden lg:max-h-[800px]">
+          <img src="/map.png" alt="Map background" className="w-full h-full object-cover" />
+        </div>
 
         <div className="absolute top-1/2 left-3 lg:left-0 transform lg:-translate-x-1/5 -translate-y-1/2">
           <Card image="/house-image-2.jpg" title="Beverly Springfield" location="2821 Lake Sevilla, Palm Harbor, TX" price={2700} />
