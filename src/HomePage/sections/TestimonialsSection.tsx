@@ -1,18 +1,32 @@
 import { useEffect, useState } from "react";
 import { testimonials } from "../../data/testimonials";
+import { motion } from "framer-motion";
+import { slideInFromLeft } from "../../animations/motionVariants";
 
 const TestimonialsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const duration = 10000;
+  
   useEffect(() => {
     const iv = setInterval(() => setActiveIndex((n) => (n + 1) % testimonials.length), duration);
     return () => clearInterval(iv);
   }, []);
 
   return (
-    <section className="w-full py-24 px-6 lg:px-20 bg-gradient-to-b from-white to-[#f5f0ff] text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-4">Testimonials</h2>
-      <p className="text-gray-500 text-base max-w-xl mx-auto mb-12">See what our property managers, landlords, and tenants have to say</p>
+    <section className="w-full py-8 px-6 lg:px-20 bg-gradient-to-b from-white to-[#f5f0ff] text-center">
+      <motion.h2 className="text-3xl font-bold text-gray-900 mb-4" variants={slideInFromLeft} initial="hidden" animate="visible" custom={0}>
+        Testimonials
+      </motion.h2>
+
+      <motion.p
+        className="text-gray-500 text-base max-w-xl mx-auto mb-12"
+        variants={slideInFromLeft}
+        initial="hidden"
+        animate="visible"
+        custom={0.3}
+      >
+        See what our property managers, landlords, and tenants have to say
+      </motion.p>
 
       <blockquote className="text-xl text-gray-900 font-medium leading-relaxed max-w-3xl mx-auto mb-8 transition-opacity duration-500 ease-in-out">
         “{testimonials[activeIndex].quote}”
