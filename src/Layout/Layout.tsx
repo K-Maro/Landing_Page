@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
-import TopNav from "../TopNav/TopNav";
-import Footer from "../Footer/Footer";
+import TopNav from "./TopNav/TopNav";
+import Footer from "./Footer/Footer";
 
 function Layout() {
   return (

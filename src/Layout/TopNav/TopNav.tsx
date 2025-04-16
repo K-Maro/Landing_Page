@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 import TopNavMobileMenu from "./TopNavMobileMenu";
 
 const TopNav = () => {

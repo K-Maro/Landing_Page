@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdClose } from "react-icons/io";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 
 interface ITopNavMobileMenu {
   navLinks: string[];
