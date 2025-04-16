@@ -1,9 +1,7 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React from "react";
 import { IoIosHeartEmpty } from "react-icons/io";
 
-interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
-
-const IconButton: React.FC<IconButtonProps> = ({ ...props }) => {
+const IconButton = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button
       {...props}
