@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Menu } from "lucide-react";
-import { Home } from "lucide-react";
+import { IoIosMenu } from "react-icons/io";
 import Button from "../components/Button";
 import TopNavMobileMenu from "./TopNavMobileMenu";
 
@@ -9,15 +8,17 @@ const TopNav = () => {
   const navLinks = ["Rent", "Buy", "Sell", "Manage Property", "Resources"];
 
   return (
-    <header className="h-24 flex items-center justify-between px-6 lg:px-8 relative z-50">
-      <div className="flex items-center gap-2 font-bold text-lg">
-        <Home className="text-secondary-300" />
+    <header className="h-24 flex items-center justify-between px-5 md:px-12 relative z-50">
+      <div className="flex items-center font-bold text-lg gap-0.5">
+        <img src="/estatery-logo.svg" />
         Estatery
       </div>
 
       <nav className="hidden lg:flex items-center gap-12 text-sm font-medium text-black">
         {navLinks.map((link) => (
-          <a key={link} href="#">{link}</a>
+          <a key={link} href="#">
+            {link}
+          </a>
         ))}
       </nav>
 
@@ -26,17 +27,11 @@ const TopNav = () => {
         <Button variant="primary">Sign up</Button>
       </div>
 
-      <button
-        className="lg:hidden cursor-pointer"
-        onClick={() => setMenuOpen(true)}
-        aria-label="Open Menu"
-      >
-        <Menu size={24} />
+      <button className="lg:hidden cursor-pointer" onClick={() => setMenuOpen(true)} aria-label="Open Menu">
+        <IoIosMenu size={24} />
       </button>
 
-      {menuOpen && (
-        <TopNavMobileMenu navLinks={navLinks} onClose={() => setMenuOpen(false)} />
-      )}
+      {menuOpen && <TopNavMobileMenu navLinks={navLinks} onClose={() => setMenuOpen(false)} />}
     </header>
   );
 };

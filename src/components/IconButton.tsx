@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes } from "react";
-import { Heart } from "lucide-react";
+import { IoIosHeartEmpty } from "react-icons/io";
 
 interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
@@ -17,7 +17,7 @@ const IconButton: React.FC<IconButtonProps> = ({ ...props }) => {
         active:bg-secondary-300 active:ring-[1.5px]
       `}
     >
-      <Heart
+      <IoIosHeartEmpty
         className={`
           h-5 w-5 
           text-secondary-300
