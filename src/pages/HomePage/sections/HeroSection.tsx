@@ -37,11 +37,11 @@ const HeroSection: React.FC = () => {
 
       <div className="relative lg:w-1/2 px-9 lg:px-0">
         <div className="overflow-hidden lg:max-h-[800px]">
-          <img src="/map.png" alt="Map background" className="w-full h-full object-cover" />
+          <img src="/map.webp" alt="Map background" className="w-full h-full object-cover" />
         </div>
 
         <div className="absolute top-1/2 left-3 lg:left-0 transform lg:-translate-x-1/5 -translate-y-1/2">
-          <Card image="/house-image-2.jpg" title="Beverly Springfield" location="2821 Lake Sevilla, Palm Harbor, TX" price={2700} />
+          <Card image="/apartment-3.webp" title="Beverly Springfield" location="2821 Lake Sevilla, Palm Harbor, TX" price={2700} />
         </div>
       </div>
     </section>
