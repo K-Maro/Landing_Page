@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { testimonials } from "../../data/testimonials";
+import { testimonials } from "../../../data/testimonials";
 import { motion } from "framer-motion";
-import { slideInFromLeft } from "../../animations/motionVariants";
+import { slideInFromLeft } from "../../../animations/motionVariants";
 
 const TestimonialsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);

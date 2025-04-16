@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../../components/Card";
+import Card from "../../../components/Card";
 import { motion } from "framer-motion";
-import { slideInFromLeft } from "../../animations/motionVariants";
+import { slideInFromLeft } from "../../../animations/motionVariants";
 
 const HeroSection: React.FC = () => {
   return (

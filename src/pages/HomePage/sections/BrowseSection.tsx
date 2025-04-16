@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Tabs, { TabOption } from "../../components/Tab";
-import Card from "../../components/Card";
-import { Property, sampleApartments, sampleHouses } from "../../data/properties";
+import Tabs, { TabOption } from "../../../components/Tab";
+import Card from "../../../components/Card";
+import { Property, sampleApartments, sampleHouses } from "../../../data/properties";
 import { motion } from "framer-motion";
-import { slideInFromLeft } from "../../animations/motionVariants";
+import { slideInFromLeft } from "../../../animations/motionVariants";
 
 const BrowseSection: React.FC = () => {
   const [selected, setSelected] = useState<TabOption>("Houses");
